@@ -79,31 +79,31 @@ Installations requises
 1. Créer un environnement virtuel python 3
 
 2. Installer django 
-⋅⋅* pip install django
+    1. pip install django
 3. Installer une base de donnée postgreSQL
-⋅⋅* Créer un  utilisateur ,et une base de donnée.
-⋅⋅* Aller dans le fichier settings.py du projetpython et remplacer ‘NAME’  par le nom de votre base de donnée,’USER’ par le nom de l’utilisateur,et 'PASSWORD' par votre password.
+    1. Créer un  utilisateur ,et une base de donnée.
+    2. Aller dans le fichier settings.py du projetpython et remplacer ‘NAME’  par le nom de votre base de donnée,’USER’ par le nom de l’utilisateur,et 'PASSWORD' par votre password.
 
 4. Installer l'adaptateur de base de données PostgreSQL
-⋅⋅* $ pip install psycopg2
+    1. $ pip install psycopg2
 5. Installer l’extension qui transformer des ensembles de données en tableaux HTML
-⋅⋅* $ pip install django_tables2
+    1. $ pip install django_tables2
 6. Installler l’extension  pour afficher ou masquer dynamiquement les colonnes à l'aide de jQuery.
-⋅⋅* $ pip install django-tables2-column-shifter
+    1. $ pip install django-tables2-column-shifter
 
-7. Préparer la base de données :
-⋅⋅* $ python manage.py makemigrations HATVP_app
-⋅⋅* puis  migrer vos models
- ⋅⋅* python manage.py migrate
+7. Préparer la base de données.
+    1. $ python manage.py makemigrations HATVP_app
+    2. puis  migrer vos models
+    3. python manage.py migrate
 
 8. Importer les donnees en base de donnée
-⋅⋅* python manage.py import
+    1. python manage.py import
 
 9. Créer un super-utilisateur pour accéder a la page d’administration : 
-⋅⋅*python manage.py createsuperuser
+    1. python manage.py createsuperuser
 
 10. Démarrer le serveur :
-⋅⋅* python manage.py runserver
+    1. python manage.py runserver
 
 
 
