@@ -9,13 +9,15 @@ urlpatterns = [
     # definir la route pour la page home
 
    path('',views.index,name="index"),
+
+   path('index.html',views.index,name="index"),
     #path('',GeneralInformationListView.as_view(),name="index"),
 
     # definir la route vers result
 
-    path('generic',views.generic,name="generic"),
+    path('generic.html',views.generic,name="generic"),
 
-    path('element',views.element,name="element")
+    path('element.html',views.element,name="element")
 
 ]
 

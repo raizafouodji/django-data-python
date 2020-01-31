@@ -27,13 +27,14 @@ def index(request):
         director_table_class = DirectorTable
         associate_table_class = AssociateTable
         client_table_class = ClientTable
+       
 
 
         context['container_css'] = "col-xs-10 col-xs-offset-1"
 
         # query db
         #query = str('STORENGY')
-        query = str(request.GET['q'])
+        query = str(request.GET.get('q'))
         result = enterprise_details(query)
         
 
@@ -47,6 +48,7 @@ def index(request):
         director_table = director_table_class(result['director'])
         associate_table = associate_table_class(result['associate'])
         client_table = client_table_class(result['client'])
+        
         # Turn on sorting and pagination
         RequestConfig(request, paginate={'per_page': 3}).configure(gi_table)
         RequestConfig(request, paginate={'per_page': 3}).configure(actions_table)
@@ -76,9 +78,9 @@ def generic(request):
     # afficher la page d'accueil 
 
     # variable dynamique definit dans la home et qui se charge a l'affichage de la page
-    query = str('STORENGY')
-    details = enterprise_details(query)
-    context['gi'] = details
+    #query = str('STORENGY')
+    #details = enterprise_details(query)
+    #context['gi'] = details
 
     return render(request,"generic.html")
 
