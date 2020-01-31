@@ -46,7 +46,7 @@ class Command(BaseCommand):
                         # detected formats
                         if isinstance(field, models.DateTimeField):
                             try:
-                                defaults[field.attname] = datetime.strptime(value, "%d/%m/%Y %H:%M:%S")
+                                defaults[field.attname] = datetime.strptime(value, "%d/%m/%Y %H:%M")
                             except ValueError: # strptime raises a ValueError
                                 defaults[field.attname] = datetime.strptime(value, "%Y-%m-%d")
                         # else, simply set the field
