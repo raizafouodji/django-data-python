@@ -17,8 +17,10 @@ mouvements financiers déclarés entre responsables d'interets responsables poli
 librement téléchargeables sur [le site internet de la HATVP](https://www.hatvp.fr/le-repertoire/#open-data-repertoire).
 Dans le cadre de ce projet, nous avons étudié et développé une application permettant de l'exploiter les
 données issues d'un lot de 15 fichiers au format .CSV (15 tables accompagnées d'un fichier de documentation).
-Méthodologie de traitement des données
-======================================
+
+Méthodologie de traitement des données.
+=======================================
+
 La collecte des données
 -----------------------
 Le lot de 15 fichiers à analyser recence sous forme de tables les informations nécessaires à la compréhension
@@ -42,6 +44,7 @@ En plus du fichier de documentation, nous avons donc travaillé sur les 15 table
 13._ministeres_aai_api.csv
 14._observations.csv
 15._exercices.csv
+
 L'angle d'attaque de l'application
 -------------------------
 - Nous souhaitons créer une application permettant à son utilisateur de rechercher les actions de lobbying effectuées par une entreprise. Grâce a cette application, inscrire le nom de l'entreprise permettra d'obtenir toutes les informations de manière claire.
