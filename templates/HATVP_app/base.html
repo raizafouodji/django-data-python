@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="{{ LANGUAGE_CODE|default:"en" }}">
+    <head>
+        <title>Testproject</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'HATVP_app/css/main.css ' %}" />
+
+        {# CSS for bootstrap #}
+        {% block bootstrap_css %}
+            <link rel="stylesheet" href="{% static 'bootstrap4.1.3/css/bootstrap.min.css' %}"/>
+        {% endblock %}
+
+        {% block extra_head %}{% endblock extra_head %}
+        <style>
+            #html {
+                font-size: 13pt;
+                font-family: "Raleway", Arial, Helvetica, sans-serif;
+            }
+            #html body {
+                font-family: "Raleway", Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.65;
+            }
+            #html #banner h1 {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+            }
+            #html h1 {
+                font-size: 3rem; 
+                line-height: 1.2;
+                font-weight: 300;
+                line-height: 1.5;
+                text-transform: uppercase;
+                margin: 0 0 1.5rem 0;
+            }
+        </style>
+
+    </head>
+
+    <body class="is-preload">
+        <!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">France-Lobby</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Generic</a></li>
+				</ul>
+            </nav>
+        <!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>France Lobby</h1>
+					
+						<h3>Mesurez l'influence des représentants d'intérets sur nos élus</h3>
+							<div class="alignsearch">	
+								<form data-dojo-attach-point="containerNode" data-dojo-attach-event="onreset:_onReset,onsubmit:_onSubmit" dir="ltr" lang="FR" id="formRecherche" action="#" method="get" widgetid="formRecherche">
+									<span class="spinnerContainer">
+										{% if query %} <input name="q" type="text" class="field"  placeholder="{{query}}" id="phrase"> 
+                                        {% else %} <input name="q" type="text" class="field"  placeholder="Entreprise, association, ONG, groupes d'intérets...">
+                                        {% endif %}
+									</span>
+									<!-- <input type="submit" class="button"> -->
+					<!-- <span class="small-link">Ou utilisez la <a href="/recherche-siret-entreprise">recherche avancée</a></span> -->
+								</form>
+							</div>
+							<p>Aujourd’hui : <strong>24673 </strong>mises à jour enregistrées sur les repésentants d'intérets</p>
+				</div>
+				<video autoplay loop muted playsinline src="{% static 'HATVP_app/images/banner.mp4' %}"></video>
+            </section>
+            <!-- Highlights -->
+            {% block body %}
+                {% endblock body %}
+			<section class="wrapper">
+					<header class="special">
+						
+						<h3>Tous les outils pour mesurer l'importance et le poids des lobby sur la vie politique en France</h3>
+						<p>Tapez le nom d’un représentant d’intérêt (entreprise, association, ONG) dans la barre de recherche et obtenez toutes les informations relatives aux financements des élus.</p>
+                    </header>
+                    
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>La recherche de la transparence</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<h3>Visualisez les budgets d'influences, secteur par secteur</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>un outil de compréhension des rapports de forces entre entreprises et gouvernement</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>Un outil citoyen gratuit</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+									<h3>Des données open sources retravaillées</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+									<h3></h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+					</div>
+				
+			</section>
+        
+
+
+        <!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>Accumsan montes viverra</h3>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+						</section>
+						<section>
+							<h4>Sem turpis amet semper</h4>
+							<ul class="alt">
+								<li><a href="#">Dolor pulvinar sed etiam.</a></li>
+								<li><a href="#">Etiam vel lorem sed amet.</a></li>
+								<li><a href="#">Felis enim feugiat viverra.</a></li>
+								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Magna sed ipsum</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+					</div>
+				</div>
+			</footer>
+
+        {% block body_ekstra %}
+            <script src="{% static 'jquery/jquery3.min.js' %}"></script>
+
+            {# Javascripts for bootstrap #}
+            {% block bootstrap_js %}
+            {% endblock %}
+
+            {# !! --> JS for column_shifter #}
+            <script
+                type="text/javascript"
+                src="{% static 'django_tables2_column_shifter/js/django_tables2_column_shifter.min.js' %}">
+            </script>
+
+        {% endblock body_ekstra %}
+
+        <!-- Scripts -->
+			<script src="{% static 'HATVP_app/js/browser.min.js'%}"></script>
+			<script src="{% static 'HATVP_app/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'HATVP_app/js/util.js '%}"></script>
+			<script src="{% static 'HATVP_app/js/main.js'%}"></script>
+            </script>
+    </body>
+</html>

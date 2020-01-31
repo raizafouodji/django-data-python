@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="{{ LANGUAGE_CODE|default:"en" }}" id="html">
+    <head>
+        <title>Testproject</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+        <meta name="keywords" content="" />
+        {# CSS for bootstrap #}
+        {% block bootstrap_css %}
+        {% endblock %}
+        {% block extra_head %}{% endblock extra_head %}
+		<link rel="stylesheet" href="{% static 'HATVP_app/css/main.css ' %}" />
+        <style>
+            #html {
+                font-size: 13pt;
+                font-family: "Raleway", Arial, Helvetica, sans-serif;
+            }
+            #html body {
+                font-family: "Raleway", Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.65;
+            }
+            #html #banner h1 {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+            }
+            #html h1 {
+                font-size: 3rem; 
+                line-height: 1.2;
+                font-weight: 300;
+                line-height: 1.5;
+                text-transform: uppercase;
+                margin: 0 0 1.5rem 0;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+        <!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">France-Lobby</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Generic</a></li>
+				</ul>
+            </nav>
+        <!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>France Lobby</h1>
+					
+						<h3>Mesurez l'influence des représentants d'intérets sur nos élus</h3>
+							<div class="alignsearch">	
+								<form data-dojo-attach-point="containerNode" data-dojo-attach-event="onreset:_onReset,onsubmit:_onSubmit" dir="ltr" lang="FR" id="formRecherche" action="#" method="get" widgetid="formRecherche">
+									<span class="spinnerContainer">
+                                        {% if query %} <input name="q" type="text" class="field"  placeholder="{{query}}" id="phrase"> 
+                                        {% else %} <input name="q" type="text" class="field"  placeholder="Entreprise, association, ONG, groupes d'intérets...">
+                                        {% endif %}
+									</span>
+									<!-- <input type="submit" class="button"> -->
+					<!-- <span class="small-link">Ou utilisez la <a href="/recherche-siret-entreprise">recherche avancée</a></span> -->
+								</form>
+							</div>
+							<p>Aujourd’hui : <strong>24673 </strong>mises à jour enregistrées sur les repésentants d'intérets</p>
+				</div>
+				<video autoplay loop muted playsinline src="{% static 'HATVP_app/images/banner.mp4' %}"></video>
+			</section>
+        {% block body %}
+        {% endblock body %}
+
+
+        
+
+        {% block body_ekstra %}
+            <script src="{% static 'jquery/jquery3.min.js' %}"></script>
+
+            {# Javascripts for bootstrap #}
+            {% block bootstrap_js %}
+            {% endblock %}
+
+            {# !! --> JS for column_shifter #}
+            <!-- Scripts -->
+			<script src="{% static 'HATVP_app/js/popper.min.js '%}"></script>
+			<script src="{% static 'HATVP_app/js/jquery.min.js '%}"></script>
+			<script src="{% static 'HATVP_app/js/browser.min.js'%}"></script>
+			<script src="{% static 'HATVP_app/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'HATVP_app/js/util.js '%}"></script>
+			<script src="{% static 'HATVP_app/js/main.js'%}"></script>
+            <script
+                type="text/javascript"
+                src="{% static 'django_tables2_column_shifter/js/django_tables2_column_shifter.min.js' %}">
+            </script>
+
+        {% endblock body_ekstra %}
+
+        
+    </body>
+</html>

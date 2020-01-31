@@ -1,0 +1,56 @@
+{% extends "base_site.html" %}
+{% load django_tables2 %}
+
+{% block content %}
+
+    
+    <div class="row">
+        <div class="{{ container_css }}">
+            {% if gi %}
+            <h4> Informations Générales </h4>
+                {% render_table gi %}
+            {% endif %}
+
+            {% if director %}
+            <h4> Dirrigeants </h4>
+                {% render_table director %}
+            {% endif %}
+            
+            {% if associate %}
+            <h4> Associés </h4>
+                {% render_table associate %}
+            {% endif %}
+            
+            {% if client %}
+            <h4> Clients </h4>
+                {% render_table client %}
+            {% endif %}
+            {% if action %}
+            <h4> Actions </h4>
+                {% render_table action %}
+            {% endif %}
+
+            {% if beneficirary %}
+            <h4> Bénéficiares </h4>
+                {% render_table beneficirary %}
+            {% endif %}
+
+            {% if decision %}
+            <h4> Décision </h4>
+                {% render_table decision %}
+            {% endif %}
+
+            {% if period %}
+            <h4>Période </h4>
+                {% render_table period %}
+            {% endif %}
+            
+            {% if activity %}
+            <h4> Activités </h4>
+                {% render_table activity %}
+            {% endif %}
+            
+        </div>
+    </div>
+
+{% endblock %}
