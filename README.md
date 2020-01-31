@@ -12,6 +12,7 @@ Liste des participants au projet:
 Projet disponible sur **GitHub** : https://github.com/raizafouodji/django-data-python
 
 **Champs d'étude du jeu de données**
+
 La Haute Autorité pour la Transparence de la Vie Publique est une institution chargée de controler la
 déontologie des responsables publics et de gérer les répertoires des représentants d'intérets.
 Elle met à disposition de tous les citoyens des fichiers open-data contenant des informations sur les
