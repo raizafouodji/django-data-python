@@ -2,12 +2,12 @@
 Projet HATVP
 ============
 Liste des participants au projet:
-   *Raissa Tatsa'a Fouodji
-   *Mohammad Backer Ibrahim
-   *Jahd Jabre
-   *Thibault Lefebvre
-   *Amaury Mouquet
-   *Ayoub Ouzahout
+   1. Raissa Tatsa'a Fouodji
+   2. Mohammad Backer Ibrahim
+   3. Jahd Jabre
+   4. Thibault Lefebvre
+   5. Amaury Mouquet
+   6. Ayoub Ouzahout
 Projet disponible sur **GitHub** : https://github.com/raizafouodji/django-data-python
 **Champs d'étude du jeu de données**
 La Haute Autorité pour la Transparence de la Vie Publique est une institution chargée de controler la
