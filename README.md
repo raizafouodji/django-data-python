@@ -8,6 +8,7 @@ Liste des participants au projet:
    4. Thibault Lefebvre
    5. Amaury Mouquet
    6. Ayoub Ouzahout
+   
 Projet disponible sur **GitHub** : https://github.com/raizafouodji/django-data-python
 **Champs d'étude du jeu de données**
 La Haute Autorité pour la Transparence de la Vie Publique est une institution chargée de controler la
